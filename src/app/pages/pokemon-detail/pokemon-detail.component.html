@@ -44,7 +44,7 @@
     <!-- Evolutions Section -->
     <div *ngIf="selectedTab === 'evolutions'" class="evolutions">
       <div *ngIf="pokemon?.evolutionChainId">
-        <app-evolution [evolutionChainId]="pokemon.evolutionChainId"></app-evolution>
+        <app-evolution [backgroundColor]="backgroundColor" [evolutionChainId]="pokemon.evolutionChainId" ></app-evolution>
       </div>
     </div>
   </div>

@@ -16,6 +16,7 @@ import {EvolutionChainResponse} from '../../models/evolution.model';
 })
 export class EvolutionComponent implements OnInit {
   @Input() evolutionChainId!: number;
+  @Input() backgroundColor!: string;
   evolutionData: EvolutionChainResponse = {pokemon_v2_evolutionchain: []};
 
   constructor(private evolutionService: EvolutionService) {

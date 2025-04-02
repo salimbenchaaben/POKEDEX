@@ -11,7 +11,7 @@
           />
           <p class="pokemon-name">{{ pokemon.name | titlecase }}</p>
         </div>
-        <span *ngIf="i < species.length - 1" class="evolution-arrow">&rarr;</span>
+        <span *ngIf="i < species.length - 1" [style.color]="backgroundColor" class="evolution-arrow">&rarr;</span>
       </div>
     </div>
   </ng-container>
