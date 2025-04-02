@@ -1,0 +1,54 @@
+.not-found-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ff5c5c;
+  font-family: 'Patrick Hand', cursive;
+  position: relative;
+}
+
+.not-found-text {
+  font-size: 48px;
+  color: white;
+}
+
+.not-found-img {
+  width: 20%;
+  height: auto;
+}
+
+.back-button {
+  position: absolute;
+  top: 2%;
+  left: 5%;
+}
+
+.back-button button {
+  border: none;
+  cursor: pointer;
+  font-size: 5vi;
+  font-weight: bold;
+  font-family: monospace;
+  border-radius: 15px;
+  color: white;
+  background-color: transparent;
+
+}
+
+@media (max-width: 768px) {
+  .not-found-text {
+    font-size: 20px;
+  }
+
+  .not-found-img {
+    width: 150px;
+  }
+
+  .back-button {
+    font-size: 25px;
+    top: 15px;
+    left: 15px;
+  }
+}

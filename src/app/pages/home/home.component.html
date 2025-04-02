@@ -1,0 +1,12 @@
+<router-outlet></router-outlet>
+
+
+<div class="search-container">
+  <div class="search-box">
+    <input type="text" id="searchInput" [(ngModel)]="searchQuery" placeholder="Enter name or ID">
+    <div class="buttons">
+      <button (click)="searchPokemon()" class="search-btn">Search</button>
+      <button (click)="getRandomPokemon()" class="random-btn">Random</button>
+    </div>
+  </div>
+</div>

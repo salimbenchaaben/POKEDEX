@@ -1,0 +1,18 @@
+<div class="evolution-chain">
+  <ng-container *ngIf="evolutionData?.pokemon_v2_evolutionchain?.[0]?.pokemon_v2_pokemonspecies as species">
+    <div class="evolution-container">
+      <div *ngFor="let pokemon of species; let i = index" class="evolution-stage">
+        <div class="pokemon-info">
+          <img
+            *ngIf="pokemon.pokemon_v2_pokemons?.[0]?.pokemon_v2_pokemonsprites?.[0]?.sprites"
+            [src]="pokemon.pokemon_v2_pokemons[0].pokemon_v2_pokemonsprites[0].sprites"
+            [alt]="pokemon.name"
+            class="pokemon-image"
+          />
+          <p class="pokemon-name">{{ pokemon.name | titlecase }}</p>
+        </div>
+        <span *ngIf="i < species.length - 1" class="evolution-arrow">&rarr;</span>
+      </div>
+    </div>
+  </ng-container>
+</div>

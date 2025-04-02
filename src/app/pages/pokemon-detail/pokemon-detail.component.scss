@@ -1,0 +1,107 @@
+.pokemon-body {
+  display: block;
+  position: absolute;
+  width: 100%;
+}
+
+.back-button {
+  position: absolute;
+  top: 2%;
+  left: 5%;
+}
+
+.back-button button {
+  border: none;
+  cursor: pointer;
+  font-size: 5vi;
+  font-weight: bold;
+  font-family: monospace;
+  border-radius: 15px;
+  color: white;
+  background-color: transparent;
+
+}
+
+
+.pokemon-container {
+  text-align: center;
+  padding: 2rem;
+  border-radius: 30px;
+  //max-width: 70%;
+  margin: 8rem;
+  //color: white;
+  background-color: white;
+}
+
+.pokemon-image {
+  width: 150px;
+  position: relative;
+  top: -50px;
+}
+
+.types span {
+  display: inline-block;
+  padding: 5px 15px;
+  margin: 5px;
+  border-radius: 15px;
+  color: white;
+  font-weight: bold;
+}
+
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.tabs button {
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 5px 15px;
+  margin: 5px;
+  border-radius: 15px;
+  color: white;
+
+}
+
+.stats, .evolutions {
+  margin: 20px 20%
+}
+
+.stat-container {
+  display: flex;
+  align-items: center; // Align items vertically
+  gap: 10px; // Add spacing between text and bar
+}
+
+.stat-name {
+  width: 120px; // Adjust width for consistency
+}
+
+.stat-bar {
+  flex: 1; // Take remaining space
+  height: 10px;
+  background-color: #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  border-radius: 5px;
+  transition: width 0.3s ease-in-out;
+}
+
+
+.evolutions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.evolutions img {
+  width: 70px;
+  margin: 0 10px;
+}
