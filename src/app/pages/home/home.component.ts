@@ -4,7 +4,6 @@ import {FormsModule} from '@angular/forms';
 import {Router, RouterOutlet} from '@angular/router';
 
 @Component({
-  standalone: true,
   selector: 'app-home',
   imports: [
     FormsModule,

@@ -10,6 +10,7 @@ export interface EvolutionChain {
 export interface PokemonSpecies {
   id: number;
   name: string;
+  order: number;
   pokemon_v2_pokemons: Pokemon[];
 }
 

@@ -1,6 +1,5 @@
 import {Injectable} from '@angular/core';
 import {catchError, map, Observable, switchMap, throwError} from 'rxjs';
-import {PokemonModel} from '../models/pokemon.model';
 import {HttpClient} from '@angular/common/http';
 import {Router} from '@angular/router';
 

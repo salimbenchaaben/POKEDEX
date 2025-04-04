@@ -3,7 +3,6 @@ import {FormsModule} from '@angular/forms';
 import {Router} from '@angular/router';
 
 @Component({
-  standalone: true,
   selector: 'not-found',
   imports: [
     FormsModule

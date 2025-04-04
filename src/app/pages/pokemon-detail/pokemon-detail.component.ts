@@ -1,17 +1,14 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import {PokemonService} from '../../services/pokemon.service';
-import {NgForOf, NgIf, TitleCasePipe, UpperCasePipe} from '@angular/common';
+import {TitleCasePipe, UpperCasePipe} from '@angular/common';
 import {EvolutionComponent} from '../evolution/evolution.component';
 
 @Component({
-  standalone: true,
   selector: 'app-pokemon-detail',
   imports: [
     TitleCasePipe,
-    NgIf,
     UpperCasePipe,
-    NgForOf,
     EvolutionComponent
   ],
   templateUrl: './pokemon-detail.component.html',
@@ -21,7 +18,7 @@ export class PokemonDetailComponent implements OnInit {
   pokemon: any;
   backgroundColor: string = '#fff';
   selectedTab: 'stats' | 'evolutions' = 'stats';
-
+  isLoading : boolean = false;
   constructor(private route: ActivatedRoute,
               private router: Router,
               private pokemonService: PokemonService) {
@@ -39,6 +36,7 @@ export class PokemonDetailComponent implements OnInit {
   }
 
   fetchPokemonDetails(id: string) {
+    this.isLoading = true;
     this.pokemonService.getPokemon(id).subscribe({
       next: (data) =>{
         this.pokemon = data;
@@ -46,8 +44,12 @@ export class PokemonDetailComponent implements OnInit {
           this.router.navigate(['/not-found']);
         }
         this.backgroundColor = this.getTypeColor(this.pokemon.types[0].type.name);
+        this.isLoading = false;
       },
-      error: (e) => console.error(e)
+      error: (e) => {
+        this.isLoading = false;
+        console.error(e);
+      }
     });
   }
 

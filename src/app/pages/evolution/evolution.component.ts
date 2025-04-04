@@ -1,14 +1,11 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {EvolutionService} from '../../services/evolution.service';
-import {NgForOf, NgIf, TitleCasePipe} from '@angular/common';
+import {TitleCasePipe} from '@angular/common';
 import {EvolutionChainResponse} from '../../models/evolution.model';
 
 @Component({
-  standalone: true,
   selector: 'app-evolution',
   imports: [
-    NgIf,
-    NgForOf,
     TitleCasePipe
   ],
   templateUrl: './evolution.component.html',
